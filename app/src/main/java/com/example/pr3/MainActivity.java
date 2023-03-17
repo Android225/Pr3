@@ -1,5 +1,7 @@
 package com.example.pr3;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -8,11 +10,24 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyApp";
+    TextView loadTitle;
     Button acitvButton;
+
+    ActivityResultLauncher<Intent> dataRecieverActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK){
+                    Intent data = result.getData();
+
+                    assert data != null;
+                    loadTitle.setText(data.getStringExtra("messange"));
+                }
+            });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
