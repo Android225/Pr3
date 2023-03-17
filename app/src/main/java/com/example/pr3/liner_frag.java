@@ -47,30 +47,6 @@ public class liner_frag extends Fragment {
         Toast.makeText(getActivity(), "онВиевКреатед", Toast.LENGTH_SHORT).show();
     }
     @Override
-    public void onViewStateRestored(Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-        Log.d(TAG, "ОнВиевСтате");
-        Toast.makeText(getActivity(), "ОнВиевСтате", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.d(TAG, "онСтарт");
-        Toast.makeText(getActivity(), "онСтарт", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onResume(){
-        super.onResume();
-        Log.d(TAG, "онРесуме");
-        Toast.makeText(getActivity(), "онРесуме", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onPause(){
-        super.onPause();
-        Log.d(TAG, "онПаусе");
-        Toast.makeText(getActivity(), "онПаусе", Toast.LENGTH_SHORT).show();
-    }
-    @Override
     public void onStop(){
         super.onStop();
         Log.d(TAG, "онСтоп");
@@ -94,4 +70,29 @@ public class liner_frag extends Fragment {
         Log.d(TAG, "Дестрой");
         Toast.makeText(getActivity(), "онДестрой", Toast.LENGTH_SHORT).show();
     }
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        Log.d(TAG, "ОнВиевСтате");
+        Toast.makeText(getActivity(), "ОнВиевСтате", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.d(TAG, "онСтарт");
+        Toast.makeText(getActivity(), "онСтарт", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(TAG, "онРесуме");
+        Toast.makeText(getActivity(), "онРесуме", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG, "онПаусе");
+        Toast.makeText(getActivity(), "онПаусе", Toast.LENGTH_SHORT).show();
+    }
+
 }
