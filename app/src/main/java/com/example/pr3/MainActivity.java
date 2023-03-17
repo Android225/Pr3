@@ -3,18 +3,20 @@ package com.example.pr3;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyApp";
+    liner_frag liner__ = new liner_frag();
+    relativ_frag relativ__ = new relativ_frag();
+    ContentFragment content__ = new ContentFragment();
+
     TextView loadTitle;
     Button acitvButton;
 
@@ -31,11 +33,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment);
 
-        acitvButton = findViewById(R.id.acitvButton);
 
-        View.OnClickListener onClickListener = new View.OnClickListener() {
+
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .add(R.id.fragment_container_view,content__)
+                .commit();
+
+
+       // acitvButton = findViewById(R.id.acitvButton);
+
+       /* View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
@@ -45,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
                 Log.e(TAG, "----");
             }
-        };
+        };*/
     }
-    public void onMyClick(View view) {
+   /* public void onMyClick(View view) {
         Context context = getApplicationContext();
         CharSequence text = "Переход на second Activity";
         int duration = Toast.LENGTH_SHORT;
@@ -62,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("hello", "Hello World");
         // запуск SecondActivity
         startActivity(intent);
-    }
+    }*/
 
-    public void Reg(View view) {
+  /*  public void Reg(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
-    }
+    }*/
 }

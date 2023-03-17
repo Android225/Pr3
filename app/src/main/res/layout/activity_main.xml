@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/SkyBlue"
@@ -20,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintVertical_bias="0.167" />
 
     <Button
         android:id="@+id/acitvButton"
@@ -34,10 +35,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.442" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/linerName"
         android:layout_width="252dp"
         android:layout_height="71dp"
         android:ems="10"
@@ -48,20 +49,20 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.303" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="323dp"
-        android:layout_height="236dp"
+        android:layout_width="195dp"
+        android:layout_height="124dp"
+        android:contentDescription="TODO"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acitvButton"
-        app:layout_constraintVertical_bias="0.573"
-        tools:srcCompat="@drawable/book_svg"
-        android:contentDescription="TODO" />
+        app:layout_constraintVertical_bias="0.412"
+        tools:srcCompat="@drawable/book_svg" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
