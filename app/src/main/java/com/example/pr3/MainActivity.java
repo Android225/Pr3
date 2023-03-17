@@ -5,11 +5,15 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyApp";
@@ -35,47 +39,79 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment);
 
-
-
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
                 .add(R.id.fragment_container_view,content__)
                 .commit();
 
-
-       // acitvButton = findViewById(R.id.acitvButton);
-
-       /* View.OnClickListener onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Context context = getApplicationContext();
-                CharSequence text = "Программно";
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-                Log.e(TAG, "----");
-            }
-        };*/
     }
-   /* public void onMyClick(View view) {
+    public void onMyClick(View view) {
+
         Context context = getApplicationContext();
-        CharSequence text = "Переход на second Activity";
+        CharSequence text = "Программно";
         int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
+        Toast toast = Toast.makeText(context, "F{F{{F{F{F", duration);
         toast.show();
+        Log.e(TAG, "----");
 
-        Log.e(TAG, "Вывод ошибок в журнал");
+        FragmentTransaction fTrans = getSupportFragmentManager().beginTransaction();
 
-        // создание объекта Intent для запуска SecondActivity
-        Intent intent = new Intent(this, SecondActivity.class);
-        // передача объекта с ключом "hello" и значением "Hello World"
-        intent.putExtra("hello", "Hello World");
-        // запуск SecondActivity
-        startActivity(intent);
-    }*/
+        Bundle bundle = new Bundle();
+        String text_ = String.valueOf(((EditText) content__
+                .getView()
+                .findViewById(R.id.liner_Name))
+                .getText());
+        bundle.putString("Key", text_);
 
-  /*  public void Reg(View view) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }*/
+        liner__.setArguments(bundle);
+
+        fTrans.replace(R.id.fragment_container_view, liner__).addToBackStack(null).commit();
+
+    }
+    public void onClick_(View view) {
+
+        Context context = getApplicationContext();
+        CharSequence text = "Программно";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, "LOLOLOL", duration);
+        toast.show();
+        Log.e(TAG, "----");
+
+        FragmentTransaction fTrans = getSupportFragmentManager().beginTransaction();
+
+        Bundle bundle = new Bundle();
+        String text__ = String.valueOf(((EditText) liner__
+                .getView()
+                .findViewById(R.id.liner_Name))
+                .getText());
+        bundle.putString("Key1", text__);
+
+        relativ__.setArguments(bundle);
+
+        fTrans.replace(R.id.fragment_container_view, relativ__).addToBackStack(null).commit();
+    }
+
+    public void onClickRel(View view) {
+
+        Context context = getApplicationContext();
+        CharSequence text = "Программно";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, "HEHEHE", duration);
+        toast.show();
+        Log.e(TAG, "----");
+
+        FragmentTransaction fTrans = getSupportFragmentManager().beginTransaction();
+
+        Bundle bundle = new Bundle();
+        String text__ = String.valueOf(((EditText) relativ__
+                .getView()
+                .findViewById(R.id.relativName__))
+                .getText());
+        bundle.putString("Key2", text__);
+
+        content__.setArguments(bundle);
+
+        fTrans.replace(R.id.fragment_container_view, content__).addToBackStack(null).commit();
+    }
+
 }

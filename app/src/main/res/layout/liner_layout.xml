@@ -28,7 +28,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <EditText
-            android:id="@+id/linerName"
+            android:id="@+id/liner_Name"
             android:layout_width="252dp"
             android:layout_height="71dp"
             android:ems="10"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:background="@color/black"
-        android:onClick="onClick"
+        android:onClick="onClick_"
         android:text="@string/LOL"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

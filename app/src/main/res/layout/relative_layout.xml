@@ -6,15 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <TextView
+
+    <EditText
+        android:id="@+id/relativName__"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="87dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="676dp"
-        android:layout_toStartOf="@+id/imageView"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="22dp"
         android:text="Вася Пупкин"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,9 +25,9 @@
         android:id="@+id/relativeButton"
         android:layout_width="match_parent"
         android:layout_height="81dp"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="40dp"
-        android:onClick="onClick"
+        android:layout_below="@+id/relativName__"
+        android:layout_marginTop="33dp"
+        android:onClick="onClickRel"
         android:text="@string/LOL"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,11 +37,11 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <EditText
-        android:id="@+id/linerName"
+        android:id="@+id/liner_Name"
         android:layout_width="match_parent"
         android:layout_height="131dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="352dp"
+        android:layout_marginBottom="354dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Заметки:"
@@ -52,19 +51,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.28" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="146dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="18dp"
-        tools:srcCompat="@tools:sample/avatars" />
 
 </RelativeLayout>
