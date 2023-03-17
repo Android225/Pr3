@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Prac2</string>
+    <string name="FirstActivity">First</string>
+    <string name="SecondActivity">Second</string>
+    <string name="LOL">Применить</string>
+    <string name="Enter">Введите логин</string>
+    <string name="EnterPrev">Вход в домашнюю библиотеку</string>
+    <string name="EnterOnBiblio">Вход</string>
+    <string name="Name"> Name</string>
+    <string name="secondactivity">Перейти к SecondActivity</string>
+
+</resources>
